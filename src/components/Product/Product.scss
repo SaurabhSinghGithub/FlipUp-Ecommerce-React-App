@@ -1,0 +1,80 @@
+@import "../../App.scss";
+
+
+.card {
+    border: 1px solid rgb(236, 232, 232);
+    border-radius: 2rem;
+    background-color: #fff;
+    padding: 1rem;
+    position: relative;
+    transition: all 0.1s ease-in-out;
+
+    &:hover {
+        box-shadow: $box-shadow;
+    }
+
+    .card-category {
+        position: absolute;
+        top: 3%;
+        left: 0;
+        padding: 1rem;
+        background-color: $primary-color;
+        font-size: 1.5rem;
+        color: white;
+        text-transform: capitalize;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 10%;
+            background-color: $primary-color;
+            transform: translateY(20%);
+            border-bottom-left-radius: 2rem;
+        }
+    }
+
+    .card-image {
+        height: 25rem;
+        overflow: hidden !important;
+        box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .card-text {
+        text-align: center;
+        padding: 3rem 0;
+        color: $primary-color;
+
+        .brand {
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+        }
+
+        .card-title {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .price {
+            font-size: 1.5rem;
+
+            .discount-price {
+                opacity: .5;
+            }
+
+            .final-price {
+                margin: 0 1rem;
+                font-weight: bold;
+            }
+        }
+
+    }
+}

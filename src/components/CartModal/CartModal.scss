@@ -1,0 +1,82 @@
+@import "../../App.scss";
+
+.container {
+    position: relative;
+
+    .display-cart {
+        display: none;
+        background-color: white;
+        color: grey;
+        padding: 4rem;
+        position: absolute;
+        top: 15%;
+        right: 1%;
+        z-index: 999;
+        width: 30rem;
+
+        h1 {
+            margin-bottom: 3rem;
+            text-align: center;
+            font-size: 2rem;
+        }
+
+        .no-products {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            img {
+                width: 10rem;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            h6 {
+                text-align: center;
+                font-size: 1.5rem;
+            }
+        }
+
+
+
+        .xxx {
+            .display-btn {
+                display: flex;
+                justify-content: flex-end;
+                margin: 4rem 0;
+
+                button {
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: $primary-color;
+                    }
+                }
+            }
+
+            .cart-display-item {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 2rem;
+                gap: 3rem;
+
+                .left {
+                    display: flex;
+                    gap: 1rem;
+                    align-items: center;
+
+                    img {
+                        width: 6rem;
+                        height: 4rem;
+                        object-fit: cover;
+                    }
+
+                }
+
+                .right {}
+            }
+        }
+
+
+    }
+}
