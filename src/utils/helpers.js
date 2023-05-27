@@ -3,6 +3,6 @@ export const FormatPrice = ({ price }) => {
         style: 'currency',
         currency: "INR",
         maximumFractionDigits: 2,
-    }).format(price )
+    }).format(price * 80)
 }
 
