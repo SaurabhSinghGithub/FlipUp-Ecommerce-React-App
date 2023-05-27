@@ -31,13 +31,13 @@ const CartPage = () => {
       <div className="cart">
         <div className="cart-row">
 
-          <div className="cart-col">
+          <div className="cart-col hide">
             <h1>S.N.</h1>
           </div>
           <div className="cart-col">
             <h1>Product</h1>
           </div>
-          <div className="cart-col">
+          <div className="cart-col hide">
             <h1>Unit Price</h1>
           </div>
           <div className="cart-col">
@@ -56,13 +56,13 @@ const CartPage = () => {
 
             return (
               <div key={index} className="cart-row">
-                <div className="cart-col">
+                <div className="cart-col hide">
                   <h1>{index + 1}</h1>
                 </div>
                 <div className="cart-col">
                   <h1>{item.title}</h1>
                 </div>
-                <div className="cart-col">
+                <div className="cart-col hide">
                   <h1> <FormatPrice price={item.discountedPrice} /></h1>
                 </div>
                 <div className="cart-col quantity">
@@ -77,7 +77,7 @@ const CartPage = () => {
                   <h1> <FormatPrice price={item.totalPrice} /></h1>
                 </div>
                 <div className="cart-col delete">
-                  <button onClick={() => dispatch(removeSingleCart(item.id))}>
+                  <button className='buttonSecondary' onClick={() => dispatch(removeSingleCart(item.id))}>
                     Delete
                   </button>
                 </div>
@@ -89,11 +89,11 @@ const CartPage = () => {
 
         <div className="cart-row-2">
           <div className="clear">
-            <button onClick={() => dispatch(clearCart())}>Clear Cart</button>
+            <button className='buttonPrimary' onClick={() => dispatch(clearCart())}>Clear Cart</button>
           </div>
           <div className="checkout">
             <h1>Total ({TotalItemsCount}) items: <FormatPrice price={totalAmount} /></h1>
-            <button>Check Out</button>
+            <button className='buttonPrimary'>Check Out</button>
           </div>
         </div>
 

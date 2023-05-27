@@ -52,7 +52,7 @@ const Navbar = () => {
             <div className="search">
                 <div className="input">
 
-                    <input type="text" name="" id="" placeholder='Search your required items here' value={text} onChange={(e) => handleSearchTerm(e)} />
+                    <input type="text" name="" id="" placeholder='Search items here' value={text} onChange={(e) => handleSearchTerm(e)} />
 
                     <Link to={`/search/${text}`}>
                         <div className="search-icon">

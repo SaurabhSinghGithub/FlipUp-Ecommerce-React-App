@@ -13,7 +13,7 @@ nav {
         .bar {
             color: white;
             border: none;
-            background: rgb(249, 78, 48);
+            background: $primary-color
         }
 
         .logo {
@@ -25,7 +25,7 @@ nav {
             .shop {
                 color: white;
                 border: none;
-                background: rgb(249, 78, 48);
+                background: $primary-color;
             }
 
             .webname {
@@ -101,14 +101,14 @@ nav {
 
                 .cartTotalItems {
                     position: absolute;
-                    top: -75%;
+                    top: -65%;
                     right: 20%;
                     color: $primary-color;
                     background-color: white;
                     padding: .5rem;
                     border-radius: 50%;
-                   font-weight: bold;
-                   border: 1px solid ;
+                    font-weight: bold;
+                    border: 1px solid;
                 }
             }
 
@@ -119,10 +119,41 @@ nav {
 
 }
 
+
+
 @media (max-width: 900px) {
     nav {
+        flex-direction: column;
+
+        .left-nav {
+            align-self: self-start;
+        }
+
         .search {
-            display: none;
+            .input {
+                input {
+                    padding: 1.5rem 5rem;
+                }
+
+                .search-icon {
+                    top: 80%;
+                }
+            }
+
+            .categories {
+                display: none;
+            }
+        }
+
+        .right-nav {
+            position: absolute;
+            align-self: self-end;
+
+            .cart-btn {
+                &:hover .display-cart {
+                    display: none;
+                }
+            }
         }
     }
 }

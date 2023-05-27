@@ -12,16 +12,7 @@
         box-shadow: $box-shadow;
         padding: 1rem;
 
-        .delete {
-            button {
-                cursor: pointer;
-
-                &:hover {
-                    color: $primary-color;
-                }
-            }
-
-        }
+        .delete {}
 
         .quantity {
             display: flex;
@@ -53,15 +44,7 @@
         gap: 2rem;
         margin-bottom: 3rem;
 
-        .clear {
-            button {
-                cursor: pointer;
-
-                &:hover {
-                    color: $primary-color;
-                }
-            }
-        }
+        .clear {}
 
         .checkout {
             display: flex;
@@ -92,12 +75,20 @@
         font-size: 2rem;
         color: grey;
     }
+}
 
-    button {
-        cursor: pointer;
-        padding: 1rem 1rem;
-        color: white;
-        background-color: $primary-color;
-        border: none;
+@media (max-width: 900px) {
+    .cart {
+        .cart-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            place-content: center;
+            gap: 4rem;
+
+            .hide {
+                display: none;
+            }
+        }
     }
+
 }
